@@ -1,2 +1,2 @@
-# composert-playground
+# composer-playground
 Testing stuff
