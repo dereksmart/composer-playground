@@ -101,17 +101,6 @@ function update_release_branch {
     rsync -r --exclude='*.git*' --exclude=node_modules $DIR/* TMP_LOCAL_BUILT_VERSION
     echo "Done!"
 
-    #echo "Purging paths included in .svnignore"
-    ## check .svnignore
-    #for file in $( cat "$DIR/.svnignore" 2>/dev/null ); do
-    #    # We want to commit changes to to-test.md as well as the testing tips.
-    #    if [[ $file == "to-test.md" || $file == "docs/testing/testing-tips.md" ]]; then
-    #        continue;
-    #    fi
-    #    rm -rf TMP_LOCAL_BUILT_VERSION/$file
-    #done
-    #echo "Done!"
-
     echo "Pulling latest from $BUILD_TARGET branch"
     git clone --depth 1 -b $BUILD_TARGET --single-branch git@github.com:Automattic/jetpack.git TMP_REMOTE_BUILT_VERSION
     echo "Done!"
