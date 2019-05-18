@@ -9,12 +9,15 @@
     }
   ],
   "require": {
-    "automattic/jetpack-standards": "dev-add/release-scripts"
+    "automattic/jetpack-standards": "@dev"
   },
   "repositories": [
     {
-      "type": "git",
-      "url": "https://github.com/Automattic/jetpack-standards/"
+      "type": "path",
+      "url": "../jetpack-standards",
+      "options": {
+        "symlink": true
+      }
     }
   ]
 }
