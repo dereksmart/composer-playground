@@ -1,0 +1,23 @@
+{
+  "name": "composer/playground",
+  "description": "Playground",
+  "type": "wordpress-plugin",
+  "authors": [
+    {
+      "name": "Derek Smart",
+      "email": "smart@automattic.com"
+    }
+  ],
+  "require": {
+    "automattic/jetpack-standards": "@dev"
+  },
+  "repositories": [
+    {
+      "type": "path",
+      "url": "../jetpack-standards",
+      "options": {
+        "symlink": true
+      }
+    }
+  ]
+}
